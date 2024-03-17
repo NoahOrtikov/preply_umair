@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Noah</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-sans">
+
+    <div class="container mx-auto p-8 text-center">
+        <h1 class="text-red-500 text-4xl font-bold mb-4">Welcome Noah!</h1>
+        <p class="text-lg mb-8">This is your personalized and beautiful web page.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 bg-indigo-700 rounded-md shadow-md">
+                <h2 class="text-xl font-semibold mb-2"> Tessa  </h2>
+                <p>Black dog cute dog 4 - 6 years old   </p>
+                <img src = "https://www.dogster.com/wp-content/uploads/2022/12/Labrador-retriever1_1163331995.jpg">
+            </div>
+            <div class="p-4 bg-green-600 rounded-md shadow-md">
+                <h2 class="text-xl font-semibold mb-2"> Akira  </h2>
+                <p> Cute and black and white dog and 11 - 13 years old  </p>
+                <img src = "https://www.dutch.com/cdn/shop/articles/shutterstock_741404581_360x.jpg?v=1697091249">
+            </div>
+            <div class="p-4 bg-yellow-300 rounded-md shadow-md">
+                <h2 class="text-xl font-semibold mb-2"> Maya</h2>
+                <p> 3 months old and a mix of black,white and brown</p>
+                <img src = "https://centralillinoisdoodles.com/wp-content/uploads/bernedoodle-puppy-for-sale.jpg" height = "10">
+            </div>
+        </div>
+
+        <footer class="mt-8 text-sm">
+            <p>&copy; 2024 Beautiful Page for Noah Ortikov. my cute dogs!</p>
+        </footer>
+    </div>
+    
+    
+    
+    <h1>Welcome to the Dog Breed Guessing Game!</h1>
+    <form action="/guess" method="post">
+        <label for="guess">Guess the dog breed:</label>
+        <select name="guess" required>
+            {% for breed in breeds %}
+                <option value="{{ breed }}">{{ breed }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Submit Guess</button>
+    </form>
+    
+    
+    
+    
+
+</body>
+</html>
