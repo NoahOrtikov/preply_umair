@@ -5,12 +5,12 @@ dog_breeds={'labrador','boston terrier','Bernadoodle'}
 @app.route('/')
 def index():
     return render_template('index.html',breed = dog_breeds)
-@app.route("guess") 
+@app.route("/guess") 
 def guess():
     return render_template("result_breeds.html")
 
 
-app.run()
+app.run(debug=True)
 
 
 
