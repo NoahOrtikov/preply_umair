@@ -6,7 +6,8 @@ Created on Sat Nov 25 10:05:51 2023
 @author: noahjaceortikov
 """
 
-import turtle as t
+import turtle as t   
+o = 1
 t.speed('fastest')
 t.shape('turtle')
 t.color('blue')
