@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah's Stylish Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <!-- Website Logo -->
+                    <a href="#" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-xl text-gray-800">Noah's Site</span>
+                    </a>
+                </div>
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#about" class="py-4 px-2 text-gray-800 border-b-4 border-transparent hover:border-blue-500 transition duration-300">About</a>
+                    <a href="#services" class="py-4 px-2 text-gray-800 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Services</a>
+                    <a href="#portfolio" class="py-4 px-2 text-gray-800 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Portfolio</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-800 border-b-4 border-transparent hover:border-blue-500 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% load static %}
+
+<!-- Hero Section -->
+<div class="bg-cover bg-center h-screen" style="background-image: url('{% static 'NoahGO/images/bg.png' %}');">
+    <div class="flex items-center justify-center h-full bg-gray-900 bg-opacity-50">
+        <div class="text-center">
+            <h1 class="text-white text-5xl font-bold leading-tight">Welcome to Noah's World</h1>
+            <p class="text-white mt-4">Creating beautiful web experiences for everyone.</p>
+            <a href="#about" class="mt-8 inline-block bg-blue-500 text-white py-3 px-6 rounded-full shadow-lg uppercase tracking-wider hover:bg-blue-600 transition duration-300">Learn More</a>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">About Noah</h2>
+            <p class="mt-4 text-gray-600 text-center">Noah is a passionate web developer who loves to create stunning websites and applications. With a keen eye for design and a dedication to coding excellence, Noah brings ideas to life in the digital world.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Services</h2>
+            <div class="mt-10 flex flex-wrap">
+                <div class="w-full md:w-1/3 px-4 text-center">
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <div class="text-blue-500 mb-4">
+                            <i class="fas fa-laptop-code fa-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Web Development</h3>
+                        <p class="mt-4 text-gray-600">Creating responsive and modern websites.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 text-center mt-8 md:mt-0">
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <div class="text-blue-500 mb-4">
+                            <i class="fas fa-paint-brush fa-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Maths</h3>
+                        <p class="mt-4 text-gray-600"> I just love doing maths. I go to the next level all the time! I do 5th grade math </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 px-4 text-center mt-8 md:mt-0">
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <div class="text-blue-500 mb-4">
+                            <i class="fas fa-mobile-alt fa-2x"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Technology</h3>
+                        <p class="mt-4 text-gray-600"> I use MacOS i know all basic commands, Noah use vscode and jupyter notebook and many other technologies..</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Portfolio</h2>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://media.istockphoto.com/id/1403644222/photo/illustration-demonstrates-the-routing-of-ip-packets-throughout-the-internet-a-lan-computer.jpg?s=612x612&w=0&k=20&c=MCdnCecf2rfzLnsnivu5DOXL-6Ata-Sq6MGLvmXngPc=" alt="Project 1" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Python Learning</h3>
+                        <p class="mt-4 text-gray-600">More than 50 hours of python coding and practice..</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://mojodesign.io/wp-content/uploads/2023/12/Screenshot_7.jpeg" alt="Project 2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Web Development</h3>
+                        <p class="mt-4 text-gray-600"> I already made a website for my dogs, Now I am making 1 for myself.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://lh6.googleusercontent.com/yPsibbUh1aHOvi0U3-wtdlNpWWutbyYULv1PLkx0QlOOq81DiXVvPgvKVrtY7Ef1yZF5NLabXrHBjHL80lx9hTqR_64jGRFZdbR9FIs4LDR9RcEn1M9LX_D5i4fYKR4vNZA-dZ9R" alt="Project 3" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800">Object Oriented Programming</h3>
+                        <p class="mt-4 text-gray-600">I have covered functions, classes and reading writing files.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gray-800">Contact</h2>
+            <div class="mt-10 max-w-md mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
+                <form action="#">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Message</label>
+                        <textarea id="message" class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" rows="4" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-500 text-white py-2 px-6 rounded-full shadow-lg uppercase tracking-wider hover:bg-blue-600 transition duration-300">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto px-6 text-center text-white">
+            &copy; 2024 Noah. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
