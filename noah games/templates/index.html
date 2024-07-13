@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pygame Online</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+</head>
+<body>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    socket.on('connect', function() {
+        console.log('Connected to server');
+    });
+
+    socket.on('update_event', function(data) {
+        console.log(data.message);
+        // Update game graphics based on data received
+    });
+
+    function sendInput(data) {
+        socket.emit('input_event', data);
+    }
+
+    // Example: Send input data to the server
+    document.addEventListener('keydown', function(event) {
+        sendInput({key: event.key});
+    });
+</script>
+</body>
+</html>
